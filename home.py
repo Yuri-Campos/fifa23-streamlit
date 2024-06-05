@@ -21,11 +21,16 @@ games = json_to_list()
 fifa = st.sidebar.selectbox('Game', games)
 
 df = load_data(fifa)
+st.session_state['df_fifa'] = df
 df.set_index('Name', inplace = True)
 
 clubs = df['Club'].value_counts().index
-club = st.selectbox('Clube', clubs)
+club = st.sidebar.selectbox('Clube', clubs)
 df_filtered = df[df['Club'] == club]
+
+players = df_filtered.index
+player = st.sidebar.selectbox('Jogador', players)
+df_filtered = df[df.index == player]
 
 show_bar = st.checkbox('Show')
 if show_bar:
