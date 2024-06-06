@@ -13,6 +13,10 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+#@st.cache_data
+
+
+
 st.markdown('# FIFA DATASET! ⚽')
 st.sidebar.markdown('Made by [Yuri Campos](https://github.com/Yuri-Campos)')
 
