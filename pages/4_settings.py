@@ -25,6 +25,7 @@ if btn:
         st.write('Dataset imported!')
         df.sort_values(by='Overall', ascending=False, inplace=True)
         df = df[df['Value(£)'] > 0]
+        df = df[df['Contract Valid Until'] > 2024]
         df.drop(['ID', 'Unnamed: 0'], axis= 1, inplace=True)
         #df.set_index('Name')
         st.session_state['data'] = df
