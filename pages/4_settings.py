@@ -26,7 +26,7 @@ if btn:
         df.sort_values(by='Overall', ascending=False, inplace=True)
         df = df[df['Value(£)'] > 0]
         df.drop(['ID', 'Unnamed: 0'], axis= 1, inplace=True)
-        df.set_index('Name')
+        #df.set_index('Name')
         st.session_state['data'] = df
     else:
         st.write('Failed to import dataset!')
