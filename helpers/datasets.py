@@ -20,4 +20,6 @@ def json_to_list():
     return list(data)
 
 
-dataset_names()
+
+if __name__ == '__main__':
+    dataset_names()
