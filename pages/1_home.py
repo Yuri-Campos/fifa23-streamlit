@@ -3,10 +3,13 @@ import pandas as pd
 import os
 from helpers.datasets import json_to_list
 
-st.set_page_config(
-    layout='wide',
-    page_title='Fifa Stats'
 
+
+st.set_page_config(
+    page_title="Fifa Stats",
+    page_icon="⚽",
+    layout="wide",
+    initial_sidebar_state="expanded",
 )
 
 @st.cache_data
